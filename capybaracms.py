@@ -11,7 +11,7 @@ from jose import jwt
 
 class CapyBaraCMS:
     def __init__(self, config, app):
-        self.secret = "MyRandomSecret1sVerySecureHopeS0"
+        self.secret = os.urandom(32)
         self.config = config
         self.app = app
 
